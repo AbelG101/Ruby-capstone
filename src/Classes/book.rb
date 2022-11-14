@@ -1,4 +1,4 @@
-require './src/Classes/item.rb'
+require './src/Classes/item'
 
 class Book < Item
   attr_accessor :publisher, :cover_state
@@ -11,8 +11,8 @@ class Book < Item
   end
 
   private
+
   def can_be_archived?
     super || @cover_state.downcase == 'bad'
   end
-
 end
