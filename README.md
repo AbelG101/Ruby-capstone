@@ -1,75 +1,98 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Catalog of my things
 
-> Description the project.
+> Is a console app that will help the user keep a record of different types of things they own like books, music albums, movies, and games. The user has the ability to add as well as view the list of things they own
 
 
 ## Built With
 
 - Major languages
+  - Ruby 💎
+  - PostgreSQL
 - Frameworks
+  - RSpec
 - Technologies used
+  - Linters & Git 
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+- Not available 😟
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+
 
 ### Prerequisites
 
-### Setup
+- use git clone in order to get the copy this repo. You need to have atleast basic understanding of Ruby.
+
+
+## Setup
+
+To get a local copy up and running you'll need to have Ruby installed on your local machine.
+
 
 ### Install
 
+After installing Ruby please follow the next steps...
+
+
 ### Usage
+
+-- To clone this project use:
+```bash
+git clone https://github.com/AbelG101/Ruby-capstone.git
+```
 
 ### Run tests
 
-### Deployment
+- Change to directory of the project
+- To run tests you can type rspec src/spec/[the test file you want to run]
+
+## Author 1
+
+👤 **Abel Gebeyehu**
+
+- GitHub: [@AbelG101](https://github.com/AbelG101)
+
+- LinkedIn: [Abel Gebeyehu](https://www.linkedin.com/in/abel-gebeyehu-779743183/)
 
 
+## Author 2
 
-## Authors
+👤 **Elijah Andre**
 
-👤 **Author1**
+- GitHub: [@Elijahdre](https://github.com/Elijahdre)
+- LinkedIn: [Elijah Andre] (https://www.linkedin.com/in/elijah-odjegba/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+## Author 3
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Alena Okolike**
+
+- GitHub: [@summyalena ](https://github.com/summyalena)
+- Twitter: [Alenaokolike] (https://twitter.com/Alenaokolike)
+  
+  
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+  
 
 Feel free to check the [issues page](../../issues/).
+
+  
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+  
 
 ## 📝 License
+  
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
