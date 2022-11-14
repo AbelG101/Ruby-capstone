@@ -10,7 +10,6 @@ class Book < Item
     add_label(label)
   end
 
-
   def can_be_archived?
     super || @cover_state.downcase == 'bad'
   end

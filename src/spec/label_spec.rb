@@ -7,7 +7,7 @@ describe Label do
 
   describe '#new' do
     it 'takes two parameters and returns a label object' do
-      expect(@label).to be_an_instance_of Label;
+      expect(@label).to be_an_instance_of Label
     end
   end
 
