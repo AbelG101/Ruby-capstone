@@ -14,3 +14,14 @@ CREATE TABLE items (
 	FOREIGN KEY (source_id) REFERENCES sources(id) ON DELETE CASCADE,
 	FOREIGN KEY (label_id) REFERENCES labels(id) ON DELETE CASCADE
 );
+
+CREATE TABLE books (
+  id integer GENERATED ALWAYS AS IDENTITY,
+  publisher varchar,
+  cover_state varchar,
+  label_id integer,
+  item_id integer,
+  PRIMARY KEY (id),
+  FOREIGN KEY (label_id) REFERENCES labels(id) ON DELETE CASCADE,
+  FOREIGN KEY (item_id) REFERENCES items(id) ON DELETE CASCADE
+);
