@@ -3,7 +3,7 @@ require 'date'
 class Item
   attr_accessor :genre, :author, :source, :label, :publish_date
   attr_reader :id
-  def initialize(publish_date, archived)
+  def initialize(publish_date, archived: false)
     @id = rand(1..500)
     @publish_date = Date.strptime(publish_date, '%d/%m/%y')
     @archived = archived
