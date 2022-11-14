@@ -25,3 +25,13 @@ CREATE TABLE books (
   FOREIGN KEY (label_id) REFERENCES labels(id) ON DELETE CASCADE,
   FOREIGN KEY (item_id) REFERENCES items(id) ON DELETE CASCADE
 );
+
+CREATE TABLE labels (
+  id integer GENERATED ALWAYS AS IDENTITY,
+  title varchar,
+  color varchar,
+  book_id integer,
+  PRIMARY KEY (id),
+  FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
+);
+
