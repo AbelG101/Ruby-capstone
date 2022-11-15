@@ -1,4 +1,4 @@
-require './src/Classes/item'
+require_relative './item'
 
 class Book < Item
   attr_accessor :publisher, :cover_state
@@ -9,8 +9,6 @@ class Book < Item
     @cover_state = cover_state
     add_label(label)
   end
-
-  private
 
   def can_be_archived?
     super || @cover_state.downcase == 'bad'
