@@ -1,6 +1,6 @@
 class Genre
   attr_accessor :id, :name, :items
-  
+
   def initialize(_id, name)
     @id = Random.rand(1..499)
     @name = name
@@ -9,6 +9,6 @@ class Genre
 
   def add_item(item)
     @items << item unless @items.include?(item)
-    items.add_genre(self)     
+    items.add_genre(self)
   end
-end  
+end
