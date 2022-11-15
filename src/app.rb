@@ -27,7 +27,7 @@ class App
       create_book
     else
       preserve_data
-      puts "Thank you for using our app, see ya👋"
+      puts 'Thank you for using our app, see ya👋'
     end
   end
 end
