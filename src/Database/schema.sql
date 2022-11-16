@@ -35,3 +35,15 @@ CREATE TABLE labels (
   FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
 );
 
+CREATE TABLE authors (
+  id BIGSERIAL NOT NULL PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+);
+
+CREATE TABLE games (
+    id  INT,
+    multiplayer BOOLEAN,
+    last_played_at DATE,
+    FOREIGN KEY(id) REFERENCES item(id)
+);
