@@ -1,10 +1,11 @@
 require './src/Classes/item'
+require 'date'
 
 class MusicAlbum < Item
-  attr_reader :on_spotify
+  attr_accessor :on_spotify
 
-  def initialize(id, name, publish_date, archived: false, on_spotify: false)
-    super(id, name, publish_date, archived)
+  def initialize(on_spotify, publish_date: Date.today.to_s)
+    super(publish_date)
     @on_spotify = on_spotify
   end
 
