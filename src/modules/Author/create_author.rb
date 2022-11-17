@@ -44,14 +44,14 @@ module CreateGame
     author_arr = load_author
     game_arr = load_game
 
-    @authors.each do |author|
-      author_arr << { name: author.name, first_name: author.first_name, last_name: author.last_name }
+    @authors.each do |author_|
+      author_arr << { name: author_.name, first_name: author_.first_name, last_name: author_.last_name }
     end
 
     persist_data('./src/Store/author.json', author_arr)
 
-    @games.each do |game|
-      game_arr << { multiplayer: game.multiplayer, last_played_at: game.last_played_at }
+    @games.each do |game_|
+      game_arr << { multiplayer: game_.multiplayer, last_played_at: game_.last_played_at }
     end
 
     persist_data('./src/Store/game.json', game_arr)
