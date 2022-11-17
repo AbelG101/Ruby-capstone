@@ -3,6 +3,7 @@ class Author
 
   def initialize(name, first_name, last_name)
     @id = Random.rand(1..100)
+    @name = name
     @first_name = first_name
     @last_name = last_name
     @items = []
