@@ -8,7 +8,6 @@ module PreserveData
   MOVIES_FILE_NAME = 'src/Store/movies.json'.freeze
   SOURCE_FILE_NAME = 'src/Store/source.json'.freeze
 
-
   def preserve_data
     save_books
     save_labels
@@ -65,7 +64,8 @@ module PreserveData
       }
     end
     save_to_file(GENRES_FILE_NAME, genres_hash)
-    
+  end
+
   def save_movies
     movies_hash = []
     @movies.each do |move|

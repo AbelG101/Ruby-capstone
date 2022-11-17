@@ -5,7 +5,6 @@ require_relative '../Classes/music_album'
 require_relative '../Classes/movie'
 require_relative '../Classes/source'
 
-
 module LoadData
   LABELS_FILE_NAME = 'src/Store/labels.json'.freeze
   BOOKS_FILE_NAME = 'src/Store/books.json'.freeze
@@ -62,6 +61,9 @@ module LoadData
     genres_hash = load_data_from_file(GENRES_FILE_NAME)
     @genres = genres_hash.map do |genre|
       Genre.new(genre['name'])
+    end
+  end
+
   def load_movies
     movies_hash = []
     return movies_hash unless File.exist?(MOVIES_FILE_NAME)
