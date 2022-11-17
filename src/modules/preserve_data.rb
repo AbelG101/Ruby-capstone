@@ -46,7 +46,7 @@ module PreserveData
       album_hash = {
         on_spotify: album.on_spotify,
         Genre: album.genre.name,
-        publish_date: album.publish_date,
+        publish_date: album.publish_date
       }
       albums_hash << album_hash
     end
@@ -56,7 +56,7 @@ module PreserveData
   def save_genres
     genres_hash = @genres.map do |genre|
       {
-        name: genre.name,
+        name: genre.name
       }
     end
     save_to_file(GENRES_FILE_NAME, genres_hash)

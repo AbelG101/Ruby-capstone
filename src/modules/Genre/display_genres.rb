@@ -6,7 +6,7 @@ module DisplayGenres
     else
       puts 'Genres: '
       @genres.each_with_index do |genre, index|
-        puts "#{index+1}) name: #{genre.name}"
+        puts "#{index + 1}) name: #{genre.name}"
       end
     end
     puts '----------------'
