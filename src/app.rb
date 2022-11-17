@@ -27,7 +27,7 @@ class App
     @persist_authors = load_author
     @persist_games = load_game
   end
-  
+
   def run(option)
     case option
     when 1
