@@ -70,11 +70,11 @@ module LoadData
 
     movies_hash = load_data_from_file(MOVIES_FILE_NAME)
     @movies = movies_hash.map do |movie|
-      Movie.new(Source.new(movie['source']), movie['publish_date'], movie['silent'] )
-    # movies_hash.each do |movie|
-    #   movie_new = Movie.new(movie['name'], movie['publish_date'], movie['silent'])
-    #   load_properties(movie, movie_new)
-    #   @movies << movie_new
+      Movie.new(Source.new(movie['source']), movie['publish_date'], movie['silent'])
+      # movies_hash.each do |movie|
+      #   movie_new = Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+      #   load_properties(movie, movie_new)
+      #   @movies << movie_new
     end
   end
 
