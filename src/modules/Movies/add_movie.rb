@@ -1,3 +1,4 @@
+require_relative '../../Classes/movie'
 module AddMovie
     def add_movie
       print 'Movie name: '
