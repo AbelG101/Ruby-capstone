@@ -4,11 +4,13 @@ module PreserveData
   LABELS_FILE_NAME = 'src/Store/labels.json'.freeze
   BOOKS_FILE_NAME = 'src/Store/books.json'.freeze
   MOVIES_FILE_NAME = 'src/Store/movies.json'.freeze
+  SOURCE_FILE_NAME = 'src/Store/source.json'.freeze
 
   def preserve_data
     save_books
     save_labels
     save_movies
+    save_sources
   end
 
   def save_books
@@ -55,7 +57,17 @@ module PreserveData
     end
     save_to_file(MOVIES_FILE_NAME, movies_hash)
   end
-
+  
+  def save_sources
+    sources_hash = []
+    @sources.each do |source|
+      sources_hash << {
+        name: source.name,
+        id: source.id
+      }
+    end
+    save_to_file(SOURCE_FILE_NAME, sources_hash)
+  end
   def save_to_file(file_name, data)
     File.write(file_name, JSON.pretty_generate(data))
   end
