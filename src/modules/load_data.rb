@@ -13,6 +13,7 @@ module LoadData
     load_books
     load_labels
     load_movies
+    load_sources
 
   end
 
@@ -44,6 +45,16 @@ module LoadData
    movies_hash = load_data_from_file(MOVIES_FILE_NAME)
    @movies = movies_hash.map do |movie|
       Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+    end
+  end
+
+  def load_sources
+    sources_hash = []
+    return sources_hash unless File.exist?(SOURCE_FILE_NAME)
+
+    sources_hash = load_data_from_file(SOURCE_FILE_NAME)
+    @sources = sources_hash.map do |source|
+       Source.new(source['name'])
     end
   end
 
