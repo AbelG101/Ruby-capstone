@@ -36,7 +36,7 @@ class App
     @persist_games = load_game
   end
 
-  #  rubocop:disable Metrics/LineLength
+  #rubocop:disable Metrics/LineLength
   def run(option)
     case option
     when 1
