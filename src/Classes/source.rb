@@ -1,4 +1,4 @@
-crequire_relative 'item'
+require_relative 'item'
 class Source
   attr_reader :id
   attr_accessor :name, :items

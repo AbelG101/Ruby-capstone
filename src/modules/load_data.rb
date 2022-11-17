@@ -2,18 +2,25 @@ require_relative '../Classes/label'
 require_relative '../Classes/book'
 require_relative '../Classes/genre'
 require_relative '../Classes/music_album'
+require_relative '../Classes/movie'
+require_relative '../Classes/source'
+
 
 module LoadData
   LABELS_FILE_NAME = 'src/Store/labels.json'.freeze
   BOOKS_FILE_NAME = 'src/Store/books.json'.freeze
   ALBUMS_FILE_NAME = 'src/Store/music_albums.json'.freeze
   GENRES_FILE_NAME = 'src/Store/genres.json'.freeze
+  MOVIES_FILE_NAME = 'src/Store/movies.json'.freeze
+  SOURCE_FILE_NAME = 'src/Store/source.json'.freeze
 
   def load_data
     load_books
     load_labels
     load_albums
     load_genres
+    load_movies
+    load_sources
   end
 
   def load_books
@@ -55,6 +62,27 @@ module LoadData
     genres_hash = load_data_from_file(GENRES_FILE_NAME)
     @genres = genres_hash.map do |genre|
       Genre.new(genre['name'])
+  def load_movies
+    movies_hash = []
+    return movies_hash unless File.exist?(MOVIES_FILE_NAME)
+
+    movies_hash = load_data_from_file(MOVIES_FILE_NAME)
+    # @movies = movies_hash.map do |movie|
+    #   Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+    movies_hash.each do |movie|
+      movie_new = Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+      load_properties(movie, movie_new)
+      @movies << movie_new
+    end
+  end
+
+  def load_sources
+    sources_hash = []
+    return sources_hash unless File.exist?(SOURCE_FILE_NAME)
+
+    sources_hash = load_data_from_file(SOURCE_FILE_NAME)
+    @sources = sources_hash.map do |source|
+      Source.new(source['name'])
     end
   end
 
