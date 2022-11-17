@@ -36,10 +36,10 @@ module LoadData
   end
 
   def load_movies
-   movie_hash = []
-   return movie_hash unless File.exist?(MOVIES_FILE_NAME)
+   movies_hash = []
+   return movies_hash unless File.exist?(MOVIES_FILE_NAME)
     
-   movie_hash = load_data_from_file(MOVIES_FILE_NAME)
+   movies_hash = load_data_from_file(MOVIES_FILE_NAME)
    @movies = movies_hash.map do |movie|
       Movie.new(movie['name'], movie['publish_date'], movie['silent'])
     end
