@@ -5,7 +5,7 @@ require_relative '../Classes/source'
 
 module LoadData
   LABELS_FILE_NAME = 'src/Store/labels.json'.freeze
-  BOOKS_FILE_NAME =  'src/Store/books.json'.freeze
+  BOOKS_FILE_NAME = 'src/Store/books.json'.freeze
   MOVIES_FILE_NAME = 'src/Store/movies.json'.freeze
   SOURCE_FILE_NAME = 'src/Store/source.json'.freeze
 
@@ -14,7 +14,6 @@ module LoadData
     load_labels
     load_movies
     load_sources
-
   end
 
   def load_books
@@ -39,11 +38,11 @@ module LoadData
   end
 
   def load_movies
-   movies_hash = []
-   return movies_hash unless File.exist?(MOVIES_FILE_NAME)
-    
-   movies_hash = load_data_from_file(MOVIES_FILE_NAME)
-   @movies = movies_hash.map do |movie|
+    movies_hash = []
+    return movies_hash unless File.exist?(MOVIES_FILE_NAME)
+
+    movies_hash = load_data_from_file(MOVIES_FILE_NAME)
+    @movies = movies_hash.map do |movie|
       Movie.new(movie['name'], movie['publish_date'], movie['silent'])
     end
   end
@@ -54,7 +53,7 @@ module LoadData
 
     sources_hash = load_data_from_file(SOURCE_FILE_NAME)
     @sources = sources_hash.map do |source|
-       Source.new(source['name'])
+      Source.new(source['name'])
     end
   end
 
