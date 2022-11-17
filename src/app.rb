@@ -1,8 +1,9 @@
 require_relative './modules/Book/create_book'
 require_relative './modules/Book/display_books'
 require_relative './modules/Label/display_labels'
-require_relative './modules/Book/add_movie'
-require_relative './modules/Book/list_movie'
+require_relative './modules/Movies/add_movie'
+require_relative './modules/Movies/list_movie'
+require_relative './modules/Source/list_source'
 require_relative './modules/preserve_data'
 require_relative './modules/load_data'
 
@@ -14,11 +15,13 @@ class App
   include DisplayLabels
   include AddMovie
   include ListMovie
+  include Source
 
   def initialize
     @books = []
     @labels = []
     @movies = []
+    @sources = []
     load_data
   end
 
@@ -30,6 +33,8 @@ class App
       list_movie
     when 6
       display_labels
+    when 8
+      list_source
     when 9
       create_book
     when 11
