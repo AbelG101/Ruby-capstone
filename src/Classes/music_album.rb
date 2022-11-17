@@ -10,8 +10,6 @@ class MusicAlbum < Item
     add_genre(genre)
   end
 
-  private
-
   def can_be_archived?
     super && @on_spotify
   end
