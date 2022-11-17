@@ -68,17 +68,11 @@ module PreserveData
 
   def save_movies
     movies_hash = []
-    @movies.each do |move|
+    @movies.each do |mov|
       movies_hash << {
-        name: move.name,
-        publish_date: move.publish_date,
-        silent: move.silent,
-        author_first_name: move.author.first_name,
-        author_last_name: move.author.last_name,
-        label_title: move.label.title,
-        label_color: move.label.color,
-        genre: move.genre.names,
-        source: move.source.name
+        publish_date: mov.publish_date,
+        silent: mov.silent,
+        source: mov.source.name
       }
     end
     save_to_file(MOVIES_FILE_NAME, movies_hash)

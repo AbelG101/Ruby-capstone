@@ -19,7 +19,7 @@ module CreateGame
   end
 
   def create_game
-    print 'last_played_at: '
+    print 'last_played_at:(yyyy-mm-dd): '
     last_played_at = gets.chomp
     print 'multiplayer: '
     multiplayer = gets.chomp
@@ -36,7 +36,7 @@ module CreateGame
     author_list = Author.new(name, first_name, last_name)
 
     game_list = Game.new(multiplayer, last_played_at, publish_date)
-    author.add_item(game)
+    author_list.add_item(game_list)
 
     @authors << author_list
     @games << game_list

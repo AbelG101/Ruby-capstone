@@ -1,14 +1,7 @@
 [
-    {
-        "name": "big fish",
-        "publish_date": "2010-02-01",
-        "silent": false,
-        "author_first_name": "ds",
-        "author_last_name": "dsds",
-        "label_title": "sdds",
-        "label_color": "jellow",
-        "genre": "xxx",
-        "source": "xccc"
-    }
-
+  {
+    "publish_date": "2022-02-02",
+    "silent": false,
+    "source": "abcd"
+  }
 ]

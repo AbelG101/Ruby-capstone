@@ -1,1 +1,0 @@
-## This is where schema.sql will be defined
