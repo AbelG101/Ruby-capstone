@@ -1,4 +1,3 @@
-
 module ListSource
   def list_source
     puts ''
