@@ -36,7 +36,7 @@ class App
     @persist_games = load_game
   end
 
-  #rubocop:disable Metrics/LineLength
+  # rubocop:disable Metrics/CyclomaticComplexity
   def run(option)
     case option
     when 1
@@ -62,4 +62,5 @@ class App
       puts 'Thank you for using our app, see ya👋'
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 end
