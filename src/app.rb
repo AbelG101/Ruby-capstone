@@ -3,10 +3,10 @@ require_relative './modules/Book/display_books'
 require_relative './modules/Label/display_labels'
 require_relative './modules/preserve_data'
 require_relative './modules/load_data'
-require_relative './modules/Game/dispalay_game.rb'
-require_relative './modules/Author/create_author.rb'
-require_relative './modules/Author/display_author.rb'
-require_relative './modules/Game/persist_data.rb'
+require_relative './modules/Game/dispalay_game'
+require_relative './modules/Author/create_author'
+require_relative './modules/Author/display_author'
+require_relative './modules/Game/persist_data'
 
 class App
   include LoadData
@@ -27,7 +27,7 @@ class App
     @persist_authors = load_author
     @persist_games = load_game
   end
-  
+
   def run(option)
     case option
     when 1
