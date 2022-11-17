@@ -42,8 +42,12 @@ module LoadData
     return movies_hash unless File.exist?(MOVIES_FILE_NAME)
 
     movies_hash = load_data_from_file(MOVIES_FILE_NAME)
-    @movies = movies_hash.map do |movie|
-      Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+    # @movies = movies_hash.map do |movie|
+    #   Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+    movies_hash.each do |movie|
+      movie_new = Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+      load_properties(movie, movie_new)
+      @movies << movie_new
     end
   end
 
