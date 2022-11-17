@@ -1,5 +1,8 @@
 require_relative './modules/Book/create_book'
 require_relative './modules/Book/display_books'
+require_relative './modules/Genre/display_genres'
+require_relative './modules/MusicAlbum/create_music_album'
+require_relative './modules/MusicAlbum/display_music_albums'
 require_relative './modules/Label/display_labels'
 require_relative './modules/Movies/add_movie'
 require_relative './modules/Movies/list_movie'
@@ -17,6 +20,11 @@ class App
   include CreateBook
   include DisplayBooks
   include DisplayLabels
+
+  include DisplayGenres
+  include CreateMusicAlbum
+  include DisplayMusicAlbums
+
   include DisplayAuthor
   include DisplayGame
   include CreateGame
@@ -27,6 +35,8 @@ class App
   def initialize
     @books = []
     @labels = []
+    @albums = []
+    @genres = []
     @authors = []
     @games = []
     @movies = []
@@ -40,6 +50,10 @@ class App
     case option
     when 1
       display_books
+    when 2
+      display_music_albums
+    when 5
+      display_genres
     when 3
       list_movie
     when 6
@@ -48,6 +62,8 @@ class App
       list_source
     when 9
       create_book
+    when 10
+      create_music_album
     when 12
       create_game
     when 7

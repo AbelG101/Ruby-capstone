@@ -35,6 +35,24 @@ CREATE TABLE labels (
   FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
 );
 
+CREATE TABLE MUSICALBUM (
+  id integer GENERATED ALWAYS AS IDENTITY,
+  on_spotify BOOLEAN,
+  genre_id integer,
+  item_id integer,
+  PRIMARY KEY (id),
+  FOREIGN KEY(genre_id) REFERENCES GENRE (id) ON DELETE CASCADE,
+  FOREIGN KEY (item_id) REFERENCES items(id) ON DELETE CASCADE
+);
+
+CREATE TABLE GENRE (
+  id integer GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(100),
+  music_id integer,
+  PRIMARY KEY (id),
+  FOREIGN KEY(music_id) REFERENCES MUSICALBUM (id) ON DELETE CASCADE,
+);
+
 CREATE TABLE authors (
   id BIGSERIAL NOT NULL PRIMARY KEY,
   first_name VARCHAR(100),
@@ -71,3 +89,4 @@ CREATE TABLE movies(
   FOREIGN KEY (author_id) REFERENCES authors(id),
   FOREIGN KEY (source_id) REFERENCES sources(id)
 );
+
