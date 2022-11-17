@@ -1,7 +1,7 @@
 class Genre
   attr_accessor :id, :name, :items
 
-  def initialize(name, _id: Random.rand(1..499))
+  def initialize(name, id: Random.rand(1..499))
     @id = id
     @name = name
     @items = []
@@ -9,6 +9,6 @@ class Genre
 
   def add_item(item)
     @items << item unless @items.include?(item)
-    # items.add_genre(self)
+    item.genre = self
   end
 end
