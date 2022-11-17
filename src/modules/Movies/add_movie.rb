@@ -14,10 +14,22 @@ module AddMovie
       silent = false
     else
       puts 'Invalid option \n'
+    # print 'Author first name : '
+    # author_first_name = gets.chomp
+    # print 'Author last name : '
+    # author_last_name = gets.chomp
+    # print 'Label title : '
+    # label_title = gets.chomp
+    # print 'Label color : '
+    # label_color= gets.chomp
+    # print 'Genre : '
+    # genre = gets.chomp
+    # print 'Source name : '
+    # source_name = gets.chomp
     end
     movie = Movie.new(name, publish_date, silent)
     @movies << movie
-    # add_movie(movie)
+    add_properties(movie)
     puts 'Movie Added successfully'
   end
 end
