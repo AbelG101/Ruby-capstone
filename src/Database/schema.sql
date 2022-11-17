@@ -46,8 +46,9 @@ CREATE TABLE games (
     id  INT,
     multiplayer BOOLEAN,
     last_played_at DATE,
-    FOREIGN KEY(item_id) REFERENCES item(id)
-    FOREIGN KEY(authors_id) REFERENCES authors(id)
+    PRIMARY KEY (id),
+    FOREIGN KEY(game_id) REFERENCES games(id),
+    FOREIGN KEY(author_id) REFERENCES authors(id)
 )
 
 CREATE TABLE source(
