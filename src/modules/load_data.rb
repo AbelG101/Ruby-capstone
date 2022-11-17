@@ -31,6 +31,16 @@ module LoadData
     end
   end
 
+  def load_movies
+    movie_file = File.exist?('./json/movies.json') ? File.read('./json/movies.json') : '[]'
+    movie_h = JSON.parse(movie_file)
+    movie_h.each do |movie|
+      movie_new = Movie.new(movie['name'], movie['publish_date'], movie['silent'])
+      load_properties(movie, movie_new)
+      @movies << movie_new
+    end
+  end
+
   def load_data_from_file(file_name)
     file = File.read(file_name)
     JSON.parse(file)
