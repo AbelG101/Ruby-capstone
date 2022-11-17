@@ -3,10 +3,14 @@ require 'json'
 module PreserveData
   LABELS_FILE_NAME = 'src/Store/labels.json'.freeze
   BOOKS_FILE_NAME = 'src/Store/books.json'.freeze
+  ALBUMS_FILE_NAME = 'src/Store/music_albums.json'.freeze
+  GENRES_FILE_NAME = 'src/Store/genres.json'.freeze
 
   def preserve_data
     save_books
     save_labels
+    save_albums
+    save_genres
   end
 
   def save_books
@@ -34,6 +38,28 @@ module PreserveData
       }
     end
     save_to_file(LABELS_FILE_NAME, labels_hash)
+  end
+
+  def save_albums
+    albums_hash = []
+    @albums.each do |album|
+      album_hash = {
+        on_spotify: album.on_spotify,
+        Genre: album.genre.name,
+        publish_date: album.publish_date,
+      }
+      albums_hash << album_hash
+    end
+    save_to_file(ALBUMS_FILE_NAME, albums_hash)
+  end
+
+  def save_genres
+    genres_hash = @genres.map do |genre|
+      {
+        name: genre.name,
+      }
+    end
+    save_to_file(GENRES_FILE_NAME, genres_hash)
   end
 
   def save_to_file(file_name, data)
