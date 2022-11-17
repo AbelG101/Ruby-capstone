@@ -3,7 +3,10 @@ module ListMovie
     puts 'List of all movie:'
     puts 'No movie recorded yet.' if @movies.empty?
     @movies.each do |movie|
-      puts "movie name: #{movie.name},\nPublished date: #{movie.publish_date},\nsilent #{movie.silent}\n\n"
+      puts "Published date: #{movie.publish_date}"
+      puts "silent: #{movie.silent}"
+      puts "source: #{movie.source.name}"
     end
+    puts '---------'
   end
 end

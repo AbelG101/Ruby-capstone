@@ -69,6 +69,11 @@ git clone https://github.com/AbelG101/Ruby-capstone.git
 - GitHub: [@summyalena ](https://github.com/summyalena)
 - Twitter: [Alenaokolike](https://twitter.com/Alenaokolike)
 
+👤 **Youta Christabelle**
+
+- GitHub: [@Christabelle143 ](https://github.com/Christabelle143)
+- Twitter: [@christabelleyo](https://twitter.comchristabelleyo)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
