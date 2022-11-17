@@ -33,13 +33,13 @@ module CreateGame
     first_name = gets.chomp
     print 'Last_name:'
     last_name = gets.chomp
-    author = Author.new(name, first_name, last_name)
+    author_list = Author.new(name, first_name, last_name)
 
-    game = Game.new(multiplayer, last_played_at, publish_date)
+    game_list = Game.new(multiplayer, last_played_at, publish_date)
     author.add_item(game)
 
-    @authors << author
-    @games << game
+    @authors << author_list
+    @games << game_list
 
     author_arr = load_author
     game_arr = load_game
