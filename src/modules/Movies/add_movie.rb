@@ -17,7 +17,7 @@ module AddMovie
     end
     movie = Movie.new(name, publish_date, silent)
     @movies << movie
-    add_properties(movie)
+    # add_movie(movie)
     puts 'Movie Added successfully'
   end
 end
