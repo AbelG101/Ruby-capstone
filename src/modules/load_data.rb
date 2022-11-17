@@ -1,11 +1,13 @@
 require_relative '../Classes/label'
 require_relative '../Classes/book'
 require_relative '../Classes/movie'
+require_relative '../Classes/source'
 
 module LoadData
   LABELS_FILE_NAME = 'src/Store/labels.json'.freeze
-  BOOKS_FILE_NAME = 'src/Store/books.json'.freeze
+  BOOKS_FILE_NAME =  'src/Store/books.json'.freeze
   MOVIES_FILE_NAME = 'src/Store/movies.json'.freeze
+  SOURCE_FILE_NAME = 'src/Store/source.json'.freeze
 
   def load_data
     load_books
