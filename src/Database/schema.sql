@@ -39,7 +39,7 @@ CREATE TABLE authors (
   id BIGSERIAL NOT NULL PRIMARY KEY,
   first_name VARCHAR(100),
   last_name VARCHAR(100),
-  FOREIGN KEY(item_id) REFERENCES item(id)
+  FOREIGN KEY(items_id) REFERENCES item(id)
 );
 
 CREATE TABLE games (
@@ -47,7 +47,7 @@ CREATE TABLE games (
     multiplayer BOOLEAN,
     last_played_at DATE,
     FOREIGN KEY(item_id) REFERENCES item(id)
-    FOREIGN KEY(author_id) REFERENCES authors(id)
+    FOREIGN KEY(authors_id) REFERENCES authors(id)
 )
 
 CREATE TABLE source(
