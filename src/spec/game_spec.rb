@@ -1,4 +1,4 @@
-require_relative '../Classes/game.rb'
+require_relative '../Classes/game'
 
 describe Games do
   context 'would test Game class file' do

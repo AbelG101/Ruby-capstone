@@ -1,6 +1,6 @@
 require_relative '../../Classes/game'
 require_relative '../../Classes/author'
-require_relative '../Game/persist_data.rb'
+require_relative '../Game/persist_data'
 
 module CreateGame
   def persist_data(file_path, data)
