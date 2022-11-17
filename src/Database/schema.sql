@@ -35,3 +35,9 @@ CREATE TABLE labels (
   FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
 );
 
+CREATE TABLE sources(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+
