@@ -1,5 +1,5 @@
-require_relative '../../Classes/source'
-module Source
+
+module ListSource
   def list_source
     puts ''
     puts 'List of all sources:'

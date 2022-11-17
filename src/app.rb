@@ -15,7 +15,7 @@ class App
   include DisplayLabels
   include AddMovie
   include ListMovie
-  include Source
+  include ListSource
 
   def initialize
     @books = []
