@@ -4,7 +4,7 @@ require './src/Classes/item'
 describe Book do
   before :each do
     @label = double('label')
-    @book = Book.new(@label, 'Mr. Smith', 'bad', '10/10/15')
+    @book = Book.new(@label, 'Mr. Smith', 'bad', '2012-10-10')
   end
 
   describe '#new' do

@@ -1,6 +1,6 @@
 require_relative '../Classes/author'
 
-describe Authors do
+describe Author do
   context 'would test Author class file' do
     it 'should test the author class file' do
       @author = Author.new('Assumpta', 'Alena', 'Okolike')

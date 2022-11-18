@@ -1,8 +1,10 @@
 require './src/Classes/movie'
+require './src/Classes/source'
 
 describe Movie do
   before :each do
-    @movie = Movie.new('twilight', '2019-07-09', true)
+    @source = Source.new('Novel')
+    @movie = Movie.new(@source, '2019-07-09', true)
   end
 
   context 'When creating @movie. an instance of class movie' do
@@ -11,9 +13,9 @@ describe Movie do
     end
   end
 
-  context 'When retrieving the name of a movie' do
-    it 'should return the correct movie name' do
-      expect(@movie.name).to eq('twilight')
+  context 'When retrieving the source of a movie' do
+    it 'should return the correct source name' do
+      expect(@movie.source.name).to eq('Novel')
     end
   end
 
