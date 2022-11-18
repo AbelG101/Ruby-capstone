@@ -1,4 +1,4 @@
-require_relative '../../Classes/Genre'
+require_relative '../../Classes/genre'
 require_relative '../../Classes/music_album'
 
 module CreateMusicAlbum
