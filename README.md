@@ -5,7 +5,7 @@
 > Is a console app that will help the user keep a record of different types of things they own like books, music albums, movies, and games. The user has the ability to add as well as view the list of things they own
 
 
-- [Link to the project video](https://drive.google.com/file/d/1RmuI025V8i5P_sbzP_xVnrGHjY3w0eU-/view?usp=sharing) 
+- [Link to the project video]() 
 
 ## Built With
 
